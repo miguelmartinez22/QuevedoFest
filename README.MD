@@ -1,9 +1,9 @@
 # QuevedoFest
 
-- [ ] 1. Introducción
-- [ ] 2. Modelo Conceptual
+- [x] 1. Introducción
+- [x] 2. Modelo Conceptual
    - [ ] 2.1. Especificaciones
-   - [ ] 2.2. Diagrama Entidad-Relación
+   - [x] 2.2. Diagrama Entidad-Relación
 - [ ] 3. Modelo Lógico 
    - [ ] 3.1. Modelo Relacional
    - [ ] 3.2. Normalización/Desnormalización
