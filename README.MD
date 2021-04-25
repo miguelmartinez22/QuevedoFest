@@ -69,7 +69,11 @@ Cada cliente queda registrado en una base de datos almacenando toda la informaci
 comprobar si está en la lista de integrantes que acudirán al festival.
 
 Entre el cátering servido durante el evento diferenciamos el otorgado a los artistas, al personal y 
-por último al público. 
+por último al público.
+
+Un material puede ser a la vez de varios tipos. Ejemplo: foco (luz y grabación).
+
+El contacto con los artistas es efectuado a través de su mánager
 
   ## 2.2. Diagrama Entidad-Relación
 ![Screenshot](images/entidad-relación.png)
