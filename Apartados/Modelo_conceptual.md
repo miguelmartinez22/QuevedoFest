@@ -1,4 +1,4 @@
-# 2. Modelo conceptual
+# 2. Modelo Conceptual
 ## 2.1. Especificaciones
 
 Cada vez que el festival compra algún decorado, este será registrado en su correspondiente categoría,

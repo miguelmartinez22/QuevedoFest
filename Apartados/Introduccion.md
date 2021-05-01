@@ -8,7 +8,35 @@ organización de este.
 ## Organización del proyecto
 
 Este proyecto constará (tal y como se observa en el índice) con una estructura organizada en
-ocho apartados
+ocho apartados. En cada uno de los apartados se tratarán distintos aspectos del proyecto. Entre 
+los apartados diferenciamos:
+
+·INTRODUCCIÓN: apartado actual. Descripción, organización y elementos del proyecto.
+
+·MODELO CONCEPTUAL: en este apartado, se realizará una primera toma de contacto con el proyecto, 
+explicando algunos conceptos de este y realizando un primer esquema gráfico a modo de diaframa 
+entidad relación, distinguiéndose así dos subapartados: Especificaciones y Diagrama Entidad-Relación.
+
+·MODELO LÓGICO: donde se desarrollarán por escrito las primeras tablas, realizando así por un 
+lado el Modelo Relacional del Diagrama Entidad-Relación y por otro, la Normalización y Desnormalización 
+de este.
+
+·MODELO FÍSICO: creación de la base de datos, organizada en tres pasos: Diagrama de bases de datos 
+(esquema gráfico que represente de forma completa la base de datos a crear con las distintas tablas), 
+Creación de tablas y otros objetos (empleo de comandos para la creación de la debida base de datos 
+con sus tablas correspondientes), Carga de datos de prueba (realizar inserciones a las tablas ya creadas).
+
+·CONSULTAS DE LA BASE DE DATOS: realizar ciertos análisis sobre los datos introducidos anteriormente. 
+Entre las consultas podemos diferenciar: Consultas más frecuentes, aquellas consultas que sin importar si 
+son complejas o sencillas será necesario realizar (como qué artistas acudirán al evento o cuantas personas 
+acudirán como espectadores). Consultas sencillas, ejemplos de consultas no muy complicadas. Consultas de 
+agregación y resumen. Consultas con subconsultas.
+
+·VISTAS, SECUENCIAS E ÍNDICES: creación de cada uno de estos tres componentes.
+
+·SCRIPTS EN PL/PGSQL: empleo de ciertos scripts útiles en la realización de consultas a la base de datos.
+
+·EXTRAS: ciertos subapartados del proyecto que lo complementan y otorgan una mayor información sobre este.
 
 ## Elementos y personal del evento
 

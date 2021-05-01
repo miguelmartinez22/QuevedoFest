@@ -1,12 +1,11 @@
 # QuevedoFest
-++
-- [x] 1. Introducción
-- [x] 2. Modelo Conceptual
+- [x] [1. Introducción](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Introduccion.md)
+- [x] [2. Modelo Conceptual](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Modelo_conceptual.md)
    - [x] 2.1. Especificaciones
    - [x] 2.2. Diagrama Entidad-Relación
-- [ ] 3. Modelo Lógico 
-   - [ ] 3.1. Modelo Relacional
-   - [ ] 3.2. Normalización/Desnormalización
+- [x] 3. Modelo Lógico 
+   - [x] 3.1. Modelo Relacional
+   - [x] 3.2. Normalización/Desnormalización
 - [ ] 4. Modelo Físico
    - [ ] 4.1. Diagrama de base de datos (notación "Crow's feet" o IDEF1X)
    - [ ] 4.2. Creación de tablas y otros objetos
