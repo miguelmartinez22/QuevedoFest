@@ -11,3 +11,5 @@ N
 Apartados/Modelo_conceptual.md,b\6\b6c5fb14d14c69d3233c2c34d6f95d2e9fc9bdc9
 J
 Apartados/Modelo_logico.md,e\3\e36d2f6612cf3c2b7bffeee37727201edbe6ada0
+J
+Apartados/Modelo_fisico.md,e\1\e11327737e77a830057e350276d4c0a720f2db4b
