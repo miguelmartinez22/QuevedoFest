@@ -1,29 +1,29 @@
 # 3. Modelo Lógico
 ## 3.1 Modelo Relacional
 
-CLIENTE(id, nombre, teléfono, idEntrada(FK))
+CLIENTE(id(PK), nombre, teléfono, idEntrada(FK))
 
-ENTRADA(id, idCliente(FK))
+ENTRADA(id(PK), idCliente(FK))
 
-CÁTERING(id)
+CÁTERING(id(PK))
 
 CLIENTE_CÁTERING(idCliente(FK), idCátering(FK))
 
-ARTISTA(nombre, mánager)
+ARTISTA(nombre(PK), mánager)
 
-CAMERINOS(id)
+CAMERINOS(id(PK))
 
 DISPONE(idArtista(FK), idCátering(FK), idCamerinos(FK))
 
-ESPACIOS(id)
+ESPACIOS(id(PK))
 
 TIPO_ESPACIOS(idEspacios(FK), tipoEspacio)
 
-MATERIAL(id)
+MATERIAL(id(PK))
 
 TIPO_MATERIAL(idMaterial(FK), tipoMaterial)
 
-EVENTO(id)
+EVENTO(id(PK))
 
 POSEE(idEvento(FK), idMaterial(FK), idEspacios(FK), idCátering(FK))
 
