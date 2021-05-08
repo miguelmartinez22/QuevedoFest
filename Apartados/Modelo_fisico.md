@@ -9,7 +9,7 @@ Vistas las tablas expuestas en el diagrama anterior, procedemos a crearlas
 con cada una de las características asociadas. Estas tablas serán creadas 
 en una base de datos de lenguaje sql con motor postgresql.
 
-Pincha aquí para ver las tablas creadas.
+[Pincha aquí para ver las tablas creadas.](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Documentos/Creaci%C3%B3n_tablas.md)
 
 ## 4.3. Carga de datos de prueba
 
@@ -18,4 +18,4 @@ añadir contenido a estas a través de inserciones. Las inserciones creadas
 son (en este caso) de prueba, pero nos permiten hacernos una idea de cómo 
 será el desarrollo de la base de datos.
 
-Pincha aquí para ver las inserciones realizadas.
+[Pincha aquí para ver las inserciones realizadas.](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Documentos/Inserciones.md)
