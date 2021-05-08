@@ -9,7 +9,7 @@
 - [x] [4. Modelo Físico](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Modelo_fisico.md)
    - [x] 4.1. Diagrama de base de datos (notación "Crow's feet" o IDEF1X)
    - [x] 4.2. Creación de tablas y otros objetos
-   - [ ] 4.3. Carga de datos de prueba
+   - [x] 4.3. Carga de datos de prueba
 - [ ] 5. Consultas de la base de datos
    - [ ] 5.1. Consultas más frecuentes
    - [ ] 5.2. Consultas sencillas
