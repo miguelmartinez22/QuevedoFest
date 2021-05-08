@@ -1,5 +1,5 @@
 # 3. Modelo Lógico
-## 3.1 Modelo Relacional
+## 3.1. Modelo Relacional
 
 CLIENTE(id(PK), nombre, teléfono, idEntrada(FK))
 
@@ -27,7 +27,7 @@ EVENTO(id(PK))
 
 POSEE(idEvento(FK), idMaterial(FK), idEspacios(FK), idCátering(FK))
 
-## 3.1 Normalización/Desnormalización
+## 3.1. Normalización/Desnormalización
 
 ### CLIENTE:
 
