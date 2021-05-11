@@ -13,3 +13,9 @@ J
 Apartados/Modelo_logico.md,e\3\e36d2f6612cf3c2b7bffeee37727201edbe6ada0
 J
 Apartados/Modelo_fisico.md,e\1\e11327737e77a830057e350276d4c0a720f2db4b
+N
+Documentos/Creación_tablas.md,9\4\94a16a15302187d6469d792c0123788d011cf967
+I
+Documentos/Inserciones.md,1\b\1bc8d4b59368f79aaa07c4dc795ef8d02fd1e17a
+Z
+*Apartados/Consultas de la base de datos.md,9\a\9aec12b096a77167e827b6acf5b63523b0423a2b

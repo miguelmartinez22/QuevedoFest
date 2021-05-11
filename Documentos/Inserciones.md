@@ -1,7 +1,7 @@
 #Inserciones en la base de datos:
 
 ```sql
-INSERT INTO Espacios (IdEspacios, tipoespacio, HoraUso) VALUES
+INSERT INTO Espacio (IdEspacios, tipoespacio, HoraUso) VALUES
     (1, 'Escenario 1', '19:30'),
     (2, 'Escenario 2', '22:00'),
     (3, 'Escenario 3', '20:30'),
@@ -33,32 +33,41 @@ INSERT INTO Material (IdMaterial, TipoMaterial, Nombre, Descripción) VALUES
     (8, 'Grabación', 'Flash', 'Mejora la calidad de la imágen');
 ```
 ```sql
-INSERT INTO Cátering (IdCátering, Comida, Comensal) VALUES
-    (1, 'Snacks', 'Público'),
-    (2, 'Refrescos', 'Público'),
-    (3, 'Bocadillos', 'Público'),
-    (4, 'Snacks', 'Artistas'),
-    (5, 'Refrescos', 'Artistas'),
-    (6, 'Platos combinados', 'Artistas'),
-    (7, 'Snacks', 'Personal'),
-    (8, 'Refrescos', 'Personal'),
-    (9, 'Bocadillos', 'Personal'),
-    (10, 'Canapés', 'Artistas'),
-    (11, 'Sándwiches', 'Artistas');
+INSERT INTO Cátering (IdCátering, Comida, Comensal, Precio) VALUES
+    (1, 'Snacks', 'Público', 30),
+    (2, 'Refrescos', 'Público', 20),
+    (3, 'Bocadillos', 'Público', 40),
+    (4, 'Snacks', 'Artistas', 50),
+    (5, 'Refrescos', 'Artistas', 45),
+    (6, 'Platos combinados', 'Artistas', 90),
+    (7, 'Snacks', 'Personal', 35),
+    (8, 'Refrescos', 'Personal', 25),
+    (9, 'Bocadillos', 'Personal', 10),
+    (10, 'Canapés', 'Artistas', 60),
+    (11, 'Sándwiches', 'Artistas', 15);
 ```
 ```sql
-INSERT INTO Artista (Nombre, Mánager) VALUES
-    ('C Tangana', 'Alejandro Ramírez'),
-    ('Aitana', 'Roberto Giménez'),
-    ('Rosalía', 'Guillermo López'),
-    ('Omar Montes', 'Diego González'),
-    ('Enrique Iglesias', 'Lucía Domínguez'),
-    ('Juan Magán', 'Carlos Simón');
+INSERT INTO Artista (Nombre, Sueldo) VALUES
+    ('C Tangana', 10000),
+    ('Aitana', 9000),
+    ('Rosalía', 12500),
+    ('Omar Montes', 8000),
+    ('Enrique Iglesias', 8500),
+    ('Juan Magán', 7500);
 ```
 ```sql
-INSERT INTO Entrada (IdEntrada) VALUES
-    (1), (2), (3), (4), (5), (6), (7), (8), (9), (10),
-    (11), (12), (13), (14), (15), (16);
+INSERT INTO Mánager (Mánager, Número, Artista) VALUES
+    ('Alejandro Ramírez', 654621786, 'C Tangana'),
+    ('Roberto Giménez', 678129354, 'Aitana'),
+    ('Guillermo López', 693359812, 'Rosalía'),
+    ('Luisa González', 614758421, 'Omar Montes'),
+    ('Lucía Domínguez', 632195487, 'Enrique Iglesias'),
+    ('Carlos Simón', 625947812, 'Juan Magán');
+```
+```sql
+INSERT INTO Entrada (IdEntrada, Precio) VALUES
+    (1, 50), (2, 50), (3, 50), (4, 50), (5, 50), (6, 50), (7, 50), (8, 50), (9, 50), 
+    (10, 50), (11, 50), (12, 50), (13, 50), (14, 50), (15, 50), (16, 50);
 ```
 ```sql
 INSERT INTO Cliente (IdCliente, IdEntrada, Nombre, Teléfono) VALUES
@@ -80,11 +89,20 @@ INSERT INTO Cliente (IdCliente, IdEntrada, Nombre, Teléfono) VALUES
     (16, 16, 'Marta Gil', 654821697);
 ```
 ```sql
-INSERT INTO Evento (IdEvento, Hora, Escenario, Camerino, Cátering, Backstage, Artista) VALUES
-    (1, '18:00', 'Escenario 1', 'Camerino A', 4, 'Backstage 1', 'Enrique Iglesias'),
-    (2, '20:30', 'Escenario 2', 'Camerino B', 6, 'Backstage 2', 'Rosalía'),
-    (3, '19:00', 'Escenario 3', 'Camerino C', 5, 'Backstage 3', 'Juan Magán'),
-    (4, '18:30', 'Escenario 4', 'Camerino D', 6, 'Backstage 4', 'Omar Montes'),
-    (5, '19:30', 'Escenario 5', 'Camerino E', 4, 'Backstage 5', 'C Tangana'),
-    (6, '20:00', 'Escenario 6', 'Camerino F', 5, 'Backstage 6', 'Aitana');
+INSERT INTO Gastos (IdGastos, Cátering, Artista) VALUES
+    (1, 50, 8500),
+    (2, 90, 12500),
+    (3, 90, 7500),
+    (4, 60, 8000),
+    (5, 15, 10000),
+    (6, 45, 9000);
+```
+```sql
+INSERT INTO Evento (IdEvento, Hora, Escenario, Camerino, Cátering, Backstage, Artista, Gastos) VALUES
+    (1, '18:00', 'Escenario 1', 'Camerino A', 4, 'Backstage 1', 'Enrique Iglesias', 1),
+    (2, '20:30', 'Escenario 2', 'Camerino B', 6, 'Backstage 2', 'Rosalía', 2),
+    (3, '19:00', 'Escenario 3', 'Camerino C', 6, 'Backstage 3', 'Juan Magán', 3),
+    (4, '18:30', 'Escenario 4', 'Camerino D', 10, 'Backstage 4', 'Omar Montes', 4),
+    (5, '19:30', 'Escenario 5', 'Camerino E', 11, 'Backstage 5', 'C Tangana', 5),
+    (6, '20:00', 'Escenario 6', 'Camerino F', 5, 'Backstage 6', 'Aitana', 6);
 ```
