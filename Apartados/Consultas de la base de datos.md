@@ -6,6 +6,7 @@
 ```sql
 select count(IdEvento) as "Número de actuaciones" from evento;
 ```
+Resultado:
 ```sql
 Número de actuaciones
 -----------------------
@@ -34,7 +35,7 @@ Resultado:
 ¿A qué horas serán las distintas actuaciones?
 ```sql
 select e.HoraUso, ev.Artista
-from espacios e
+from espacio e
 join evento ev on (e.tipoespacio = ev.escenario)
 where e.tipoespacio
 like 'Escenario%';
@@ -123,19 +124,21 @@ Resultado:
 ---
 ¿Qué mánager tiene cada artista?
 ```sql
-select nombre, mánager
-from artista;
+select a.nombre, m.mánager
+from artista a
+join mánager m on (a.nombre = m.artista)
+group by a.nombre, m.mánager;
 ```
 Resultado:
 ```sql
       nombre      |      mánager
 ------------------+-------------------
- C Tangana        | Alejandro Ramírez
- Aitana           | Roberto Giménez
- Rosalía          | Guillermo López
- Omar Montes      | Diego González
- Enrique Iglesias | Lucía Domínguez
  Juan Magán       | Carlos Simón
+ C Tangana        | Alejandro Ramírez
+ Omar Montes      | Luisa González
+ Rosalía          | Guillermo López
+ Aitana           | Roberto Giménez
+ Enrique Iglesias | Lucía Domínguez
 (6 rows)
 ```
 ---
@@ -282,6 +285,64 @@ Resultado:
 (1 row)
 ```
 ---
+¿Cuál es el sueldo de cada artista?
+```sql
+select sueldo, nombre
+from artista
+group by nombre;
+```
+Resultado:
+```sql
+ Sueldo |      nombre
+--------+------------------
+   8500 | Enrique Iglesias
+   7500 | Juan Magán
+   9000 | Aitana
+  12500 | Rosalía
+  10000 | C Tangana
+   8000 | Omar Montes
+(6 rows)
+```
+---
+¿Cuánto es el precio de cada comida?
+```sql
+select precio, comida
+from cátering
+group by comida, precio
+order by precio;
+```
+Resultado:
+```sql
+ precio |      comida
+--------+-------------------
+     10 | Bocadillos
+     15 | Sándwiches
+     20 | Refrescos
+     25 | Refrescos
+     30 | Snacks
+     35 | Snacks
+     40 | Bocadillos
+     45 | Refrescos
+     50 | Snacks
+     60 | Canapés
+     90 | Platos combinados
+(11 rows)
+```
+---
+¿A quién corresponde el número 616946142?
+```sql
+select * 
+from cliente
+where teléfono = 616946142;
+```
+Resultado:
+```sql
+ idcliente | identrada |   nombre    | teléfono
+-----------+-----------+-------------+-----------
+         8 |         8 | Jorge Calvo | 616946142
+(1 row)
+```
+---
 ## 5.3. Consultas de agregación y resumen
 
 ---
@@ -298,10 +359,23 @@ Resultado:
 (1 row)
 ```
 ---
+¿Cuánto dinero se ha recaudado con la venta de entradas?
+```sql
+select sum(precio) as "Dinero recaudado"
+from entrada;
+```
+Resultado:
+```sql
+ Dinero recaudado
+------------------
+              800
+(1 row)
+```
+---
 ¿Cuántos escenarios hay?
 ```sql
 select count(tipoespacio) as "Número de escenarios"
-from espacios
+from espacio
 where tipoespacio
 like 'Escenario%';
 ```
@@ -316,7 +390,7 @@ Resultado:
 ¿Cuántos camerinos hay?
 ```sql
 select count(tipoespacio) as "Número de camerinos"
-from espacios
+from espacio
 where tipoespacio
 like 'Camerino%';
 ```
@@ -331,7 +405,7 @@ Resultado:
 ¿Cuántos backstage hay?
 ```sql
 select count(tipoespacio) as "Número de BackStage"
-from espacios
+from espacio
 where tipoespacio
 like 'Backstage%';
 ```
@@ -359,6 +433,84 @@ Resultado:
 (3 rows)
 ```
 ---
+¿Cuál es el sueldo más alto?
+```sql
+select max(sueldo) as "Sueldo"
+from artista;
+```
+Resultado:
+```sql
+ Sueldo
+--------
+  12500
+(1 row)
+```
+---
+¿Cuál es la suma de todos los sueldos?
+```sql
+select sum(artista) as "Suma sueldos"
+from gastos;
+```
+Resultado:
+```sql
+ Suma sueldos
+--------------
+        55500
+(1 row)
+```
+---
+¿Cuál es el la comida más cara?
+```sql
+select max(precio) as "Precio"
+from Cátering;
+```
+Resultado:
+```sql
+ Precio
+--------
+     90
+(1 row)
+```
+---
+¿Cuál es la suma del precio de todas las comidas?
+```sql
+select sum(Cátering) as "Suma precios"
+from gastos;
+```
+Resultado:
+```sql
+ Suma precios
+--------------
+          350
+(1 row)
+```
+---
+¿Cuánto es el gasto total en los artistas del evento? (Incluyendo sueldo y cátering)
+```sql
+select (sum(cátering) + sum(artista)) as "Gasto total"
+from Gastos;
+```
+Resultado:
+```sql
+ Gasto total
+-------------
+       55850
+(1 row)
+```
+---
+¿Cuál es el gasto medio en los artistas del evento?
+```sql
+select avg(artista) as "Gasto medio"
+from Gastos;
+```
+Resultado:
+```sql
+      Gasto medio
+-----------------------
+ 9250.0000000000000000
+(1 row)
+```
+---
 
 ## 5.4. Consultas con subconsultas
 
@@ -368,7 +520,7 @@ Resultado:
 select a.nombre as "Artista", es.HoraUso as "Hora"
 from artista a
 join evento ev on (a.nombre = ev.artista)
-join espacios es on (ev.escenario = es.tipoespacio)
+join espacio es on (ev.escenario = es.tipoespacio)
 order by es.HoraUso;
 ```
 Resultado:
@@ -386,10 +538,11 @@ Resultado:
 ---
 ¿Cuál es el nombre del mánager del artista que canta a las 21:00?
 ```sql
-select a.mánager as "Nombre mánager", es.HoraUso as "Hora", a.nombre as "Nombre artista"
+select m.mánager as "Nombre mánager", es.HoraUso as "Hora", a.nombre as "Nombre artista"
 from artista a
 join evento ev on (a.nombre = ev.artista)
-join espacios es on (ev.escenario = es.tipoespacio)
+join espacio es on (ev.escenario = es.tipoespacio)
+join mánager m on (m.Artista = a.nombre)
 where es.HoraUso = '21:00';
 ```
 Resultado:
@@ -405,7 +558,7 @@ Resultado:
 select es.HoraUso as "Hora", a.nombre as "Nombre artista", ev.camerino
 from artista a
 join evento ev on (a.nombre = ev.artista)
-join espacios es on (ev.escenario = es.tipoespacio)
+join espacio es on (ev.escenario = es.tipoespacio)
 where es.HoraUso = '19:30';
 ```
 Resultado:
@@ -421,15 +574,115 @@ Resultado:
 select c.comida, es.HoraUso as "Hora", a.nombre as "Nombre artista"
 from artista a
 join evento ev on (a.nombre = ev.artista)
-join espacios es on (ev.escenario = es.tipoespacio)
+join espacio es on (ev.escenario = es.tipoespacio)
 join cátering c on (ev.cátering = c.IdCátering)
 where es.HoraUso = '20:30';
 ```
 Resultado:
 ```sql
-  comida   | Hora  | Nombre artista
------------+-------+----------------
- Refrescos | 20:30 | Juan Magán
+      comida       | Hora  | Nombre artista
+-------------------+-------+----------------
+ Platos combinados | 20:30 | Juan Magán
+(1 row)
+```
+---
+¿Cuántos gastos supone la actuación de Rosalía?
+```sql
+select ev.Artista, g.cátering, g.artista
+from gastos g
+join evento ev on (ev.gastos = g.idgastos)
+where ev.artista like 'Rosalía';
+```
+Resultado:
+```sql
+ artista | cátering | artista
+---------+----------+---------
+ Rosalía |       90 |   12500
+(1 row)
+```
+---
+¿Cuál es el número de teléfono del mánager de los artistas que comen platos combinados?
+```sql
+select c.comida, a.nombre, m.Número as "Número del mánager" 
+from mánager m
+join artista a on (m.artista = a.nombre)
+join evento ev on (ev.artista = a.nombre)
+join cátering c on (ev.cátering = c.idcátering)
+where c.comida like 'Platos combinados';
+```
+Resultado:
+```sql
+      comida       |   nombre   | Número del mánager
+-------------------+------------+--------------------
+ Platos combinados | Rosalía    |          693359812
+ Platos combinados | Juan Magán |          625947812
+(2 rows)
+```
+---
+¿Cuál es el nombre del mánager del artista que cobra 12500€?
+```sql
+select m.mánager, a.nombre, a.sueldo
+from mánager m
+join artista a on (m.artista = a.nombre)
+where a.sueldo = '12500';
+```
+Resultado:
+```sql
+     mánager     | nombre  | sueldo
+-----------------+---------+--------
+ Guillermo López | Rosalía |  12500
+(1 row)
+```
+---
+¿Cuál es el nombre del artista que menos cobra?
+```sql
+select a.nombre, ar.sueldo
+from artista a
+join artista ar on (ar.nombre = a.nombre)
+where ar.sueldo = (
+    select min(sueldo)
+    from artista
+);
+```
+Resultado:
+```sql
+  artista   | sueldo
+------------+--------
+ Juan Magán |   7500
+(1 row)
+```
+---
+¿Cuál es el nombre del artista que más cobra?
+```sql
+select a.nombre, ar.sueldo
+from artista a
+join artista ar on (ar.nombre = a.nombre)
+where ar.sueldo = (
+    select max(sueldo)
+    from artista
+);
+```
+Resultado:
+```sql
+ nombre  | sueldo
+---------+--------
+ Rosalía |  12500
+(1 row)
+```
+---
+¿En qué actuación se sirve snacks al artista?
+```sql
+select ev.idevento as "Número de actuación", a.nombre as "Artista", c.comida
+from artista a
+join evento ev on (ev.artista = a.nombre)
+join cátering c on (ev.cátering = c.idcátering)
+where c.comida like 'Snacks';
+```
+Resultado:
+```sql
+ Número de actuación |     Artista      | comida
+---------------------+------------------+--------
+                   1 | Enrique Iglesias | Snacks
 (1 row)
 ```
 ---

@@ -58,7 +58,6 @@ CREATE TABLE Entrada (
 CREATE TABLE Cliente (
     IdCliente NUMERIC(5),
     IdEntrada NUMERIC(5),
-    DNI VARCHAR(9),
     Nombre VARCHAR(30),
     Teléfono NUMERIC(9),
     CONSTRAINT PK_IdCliente PRIMARY KEY(IdCliente),
