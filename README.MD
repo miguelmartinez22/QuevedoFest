@@ -15,9 +15,9 @@
    - [x] 5.2. Consultas sencillas
    - [x] 5.3. Consultas de agregación y resumen
    - [x] 5.4. Consultas con subconsultas
-- [ ] 6. Vistas, secuencias e índices
-- [ ] 7. Scripts en PL/pgSQL
-- [ ] 8. Extras
+- [x] [6. Vistas, secuencias e índices](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Vistas_secuencias_indices.md)
+- [ ] [7. Scripts en PL/pgSQL](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Scripts%20PL-pgSQL.md)
+- [ ] [8. Extras](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Extras.md)
    - [ ] 8.1. Cursores
    - [ ] 8.2. Prototipo de interfaz de usuario
    - [ ] 8.3. Plan de pruebas
