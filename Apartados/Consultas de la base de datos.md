@@ -553,6 +553,22 @@ Resultado:
 (1 row)
 ```
 ---
+¿Cuál es el escenario del artista que canta a las 21:00?
+```sql
+select es.HoraUso as "Hora", a.nombre as "Nombre artista", ev.escenario
+from artista a
+join evento ev on (a.nombre = ev.artista)
+join espacio es on (ev.escenario = es.tipoespacio)
+where es.HoraUso = '21:00';
+```
+Resultado:
+```sql
+ Hora  |  Nombre artista  |  camerino
+-------+------------------+------------
+ 19:30 | Enrique Iglesias | Camerino A
+(1 row)
+```
+---
 ¿Cuál es el camerino del artista que canta a las 19:30?
 ```sql
 select es.HoraUso as "Hora", a.nombre as "Nombre artista", ev.camerino

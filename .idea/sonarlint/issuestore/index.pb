@@ -19,3 +19,9 @@ I
 Documentos/Inserciones.md,1\b\1bc8d4b59368f79aaa07c4dc795ef8d02fd1e17a
 Z
 *Apartados/Consultas de la base de datos.md,9\a\9aec12b096a77167e827b6acf5b63523b0423a2b
+V
+&Apartados/Vistas_secuencias_indices.md,5\f\5ffb958d7f26449516b71d0af39686c3c12f8212
+C
+Apartados/Extras.md,8\6\863871d537e28503186a104f75ec6aa7f528dda0
+M
+Apartados/Scripts PL-pgSQL.md,9\7\976c1c5b15db8913472a3c682f89470caf7d9994
