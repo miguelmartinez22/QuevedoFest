@@ -18,9 +18,7 @@
 - [x] [6. Vistas, secuencias e índices](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Vistas_secuencias_indices.md)
 - [x] [7. Scripts en PL/pgSQL](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Scripts%20PL-pgSQL.md)
 - [X] [8. Extras](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Extras.md)
-   - [ ] 8.1. Cursores
-   - [x] 8.2. Prototipo de interfaz de usuario
-   - [x] 8.3. Plan de pruebas
-   - [x] 8.4. Especificaciones de pruebas en formato features Gherkin
-   - [x] 8.5. Diagrama de clases
-   - [ ] 8.6. Ejemplo de acceso a la base de datos con Java y JDBC
+   - [x] 8.1. Prototipo de interfaz de usuario
+   - [x] 8.2. Plan de pruebas
+   - [x] 8.3. Especificaciones de pruebas en formato features Gherkin
+   - [x] 8.4. Diagrama de clases
