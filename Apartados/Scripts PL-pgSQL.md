@@ -1,6 +1,6 @@
 # 7. Scripts en PL/pgSQL
 
-### Procedimiento borrar material (para la prueba se ha insertado un artista nuevo)
+### Procedimiento borrar material (para la prueba se ha insertado un material nuevo)
 ```sql
 INSERT INTO Material (IdMaterial, TipoMaterial, Nombre, Descripción) VALUES
     (9, 'Sonido', 'In-ear', 'Permite la comunicación entre el personal');
@@ -240,7 +240,7 @@ declare
 			join espacio es on (ev.escenario = es.tipoespacio)
 			where es.HoraUso = p_cur_actuacion;
 begin
-	-- modtrar actuaciones a la hora solicitada
+	-- mostrar actuaciones a la hora solicitada
 	open cur_actuacion(e_horauso);
 	fetch cur_actuacion into v_e_horauso;
 	raise notice 'A las % actua el/la artista %', e_horauso, v_e_horauso;
