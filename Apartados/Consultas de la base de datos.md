@@ -12,7 +12,6 @@ Número de actuaciones
 -----------------------
                      6
 (1 row)
-Resultado:
 ```
 ---
 ¿Qué artistas actuarán?
@@ -99,9 +98,9 @@ Resultado:
  Hector Martínez     | 689764058
  Ana Solar           | 681139826
  Francisco Rodríguez | 616703456
- Luis Martín         |  62345698
+ Luis Martín         | 623456958
  David Sánchez       | 652869748
- Lorena Alcántara    |  61245963
+ Lorena Alcántara    | 618245963
  Álvaro Aguilar      | 645889415
  Marta Gil           | 654821697
 (16 rows)
@@ -266,8 +265,8 @@ where identrada = 12;
 Resultado:
 ```sql
  idcliente | identrada |   nombre    | teléfono
------------+-----------+-------------+----------
-        12 |        12 | Luis Martín | 62345698
+-----------+-----------+-------------+-----------
+        12 |        12 | Luis Martín | 623456958
 (1 row)
 ```
 ---

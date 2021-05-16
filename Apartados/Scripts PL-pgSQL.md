@@ -1,6 +1,6 @@
 # 7. Scripts en PL/pgSQL
 
-Cursor eliminar artista (para la prueba se ha insertado un artista nuevo)
+### Cursor borrar artista (para la prueba se ha insertado un artista nuevo)
 ```sql
 insert into artista (nombre, sueldo) values ('Vicente del Bosque', 12);
 ```
@@ -60,4 +60,37 @@ Después de ejecutar el script:
  Enrique Iglesias |   8500
  Juan Magán       |   7500
 (6 rows)
+```
+
+### Función comprobar la cantidad de sueldos menores al dado
+
+Script
+```sql
+CREATE OR replace function comprobar_sueldos(
+	a_sueldo artista.sueldo%type
+)
+returns integer
+language plpgsql
+as 
+$$
+declare 
+	v_a_sueldo artista.sueldo%type;
+begin
+	-- mostrar número de sueldos menores al sueldo introducido
+	select count(sueldo) 
+	into v_a_sueldo
+	from artista
+	where sueldo < a_sueldo;
+	raise notice 'Existen % sueldos menores a % €', count(sueldo), a_sueldo;
+	-- excepciones
+	exception
+	when no_data_found then
+		raise notice 'No hay artistas con un sueldo menor a %', a_sueldo;
+	when others then 
+		raise notice 'Se ha producido un error inesperado';
+
+end;
+$$
+
+select comprobar_sueldos(10000);
 ```

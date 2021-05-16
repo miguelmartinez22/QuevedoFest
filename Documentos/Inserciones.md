@@ -82,9 +82,9 @@ INSERT INTO Cliente (IdCliente, IdEntrada, Nombre, Teléfono) VALUES
     (9, 9, 'Hector Martínez', 689764058),
     (10, 10, 'Ana Solar', 681139826),
     (11, 11, 'Francisco Rodríguez', 616703456),
-    (12, 12, 'Luis Martín', 62345698),
+    (12, 12, 'Luis Martín', 623456958),
     (13, 13, 'David Sánchez', 652869748),
-    (14, 14, 'Lorena Alcántara', 61245963),
+    (14, 14, 'Lorena Alcántara', 618245963),
     (15, 15, 'Álvaro Aguilar', 645889415),
     (16, 16, 'Marta Gil', 654821697);
 ```

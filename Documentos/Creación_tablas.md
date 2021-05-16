@@ -19,7 +19,8 @@ CREATE TABLE Material (
     TipoMaterial VARCHAR(30), 
     Nombre VARCHAR(30),
     Descripción VARCHAR(100),
-    CONSTRAINT PK_IdMaterial PRIMARY KEY(IdMaterial)
+    CONSTRAINT PK_IdMaterial PRIMARY KEY(IdMaterial),
+    CONSTRAINT Material_TipoMaterial_ck CHECK ((TipoMaterial='Sonido') or (TipoMaterial='Luz') or (TipoMaterial='Grabación'))
 );
 ```
 ```sql
@@ -59,7 +60,7 @@ CREATE TABLE Cliente (
     IdCliente NUMERIC(5),
     IdEntrada NUMERIC(5),
     Nombre VARCHAR(30),
-    Teléfono NUMERIC(9),
+    Teléfono VARCHAR(9) UNIQUE CHECK (Teléfono LIKE '6%'),
     CONSTRAINT PK_IdCliente PRIMARY KEY(IdCliente),
     CONSTRAINT IdEntrada_FK FOREIGN KEY (IdEntrada) REFERENCES Entrada(IdEntrada)
 );

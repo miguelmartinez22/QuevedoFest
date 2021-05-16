@@ -19,8 +19,8 @@
 - [ ] [7. Scripts en PL/pgSQL](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Scripts%20PL-pgSQL.md)
 - [ ] [8. Extras](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Extras.md)
    - [ ] 8.1. Cursores
-   - [ ] 8.2. Prototipo de interfaz de usuario
-   - [ ] 8.3. Plan de pruebas
-   - [ ] 8.4. Especificaciones de pruebas en [formato features Gherkin (ver ejemplo)](features/admin-carteles.feature) 
+   - [x] 8.2. Prototipo de interfaz de usuario
+   - [x] 8.3. Plan de pruebas
+   - [ ] 8.4. Especificaciones de pruebas en formato features Gherkin
    - [ ] 8.5. Diagrama de clases
    - [ ] 8.6. Ejemplo de acceso a la base de datos con Java y JDBC
