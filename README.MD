@@ -16,11 +16,11 @@
    - [x] 5.3. Consultas de agregación y resumen
    - [x] 5.4. Consultas con subconsultas
 - [x] [6. Vistas, secuencias e índices](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Vistas_secuencias_indices.md)
-- [ ] [7. Scripts en PL/pgSQL](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Scripts%20PL-pgSQL.md)
+- [x] [7. Scripts en PL/pgSQL](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Scripts%20PL-pgSQL.md)
 - [ ] [8. Extras](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Extras.md)
    - [ ] 8.1. Cursores
    - [x] 8.2. Prototipo de interfaz de usuario
    - [x] 8.3. Plan de pruebas
-   - [ ] 8.4. Especificaciones de pruebas en formato features Gherkin
-   - [ ] 8.5. Diagrama de clases
+   - [x] 8.4. Especificaciones de pruebas en formato features Gherkin
+   - [x] 8.5. Diagrama de clases
    - [ ] 8.6. Ejemplo de acceso a la base de datos con Java y JDBC

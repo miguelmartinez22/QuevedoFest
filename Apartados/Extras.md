@@ -28,7 +28,7 @@ al inicio.
 pantalla con una foto del artista correspondiente, la hora de su actuación y por último un botón 
 que permite volver al menú principal.
 
-[Aplicación QuevedoFest]()
+[Aplicación QuevedoFest](https://github.com/miguelmartinez22/QuevedoFest/blob/master/App/QuevedoFest.aia)
 
 ## 8.2. Plan de pruebas
 
