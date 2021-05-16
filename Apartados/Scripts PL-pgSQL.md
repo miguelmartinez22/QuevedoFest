@@ -1,6 +1,6 @@
 # 7. Scripts en PL/pgSQL
 
-### Procedimiento borrar material (para la prueba se ha insertado un artista nuevo)
+### Procedimiento borrar material (para la prueba se ha insertado un material nuevo)
 ```sql
 INSERT INTO Material (IdMaterial, TipoMaterial, Nombre, Descripción) VALUES
     (9, 'Sonido', 'In-ear', 'Permite la comunicación entre el personal');
