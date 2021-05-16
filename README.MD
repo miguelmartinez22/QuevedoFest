@@ -21,4 +21,4 @@
    - 8.1. Prototipo de interfaz de usuario
    - 8.2. Plan de pruebas
    - 8.3. Especificaciones de pruebas en formato features Gherkin
-   - 8.4. Diagrama de clases
+   -8.4. Diagrama de clases

@@ -1,48 +1,50 @@
 # 8. Extras
 ## 8.1. Prototipo de interfaz de usuario
 
-Se ha creado una aplicación móvil orientada al usuario asistente al evento que posee 
+Se ha creado una aplicación móvil orientada al usuario asistente al evento que posee
 como principal función realizar consultas sobre los distintos aspectos del evento:
 
 ### Funcionamiento de la APP:
 
-·En primer lugar, encontramos una primera pantalla de presentación, que introduce al usuario 
-en la aplicación. En esta pantalla encontramos además un botón que nos permitirá ir a la segunda 
+·En primer lugar, encontramos una primera pantalla de presentación, que introduce al usuario
+en la aplicación. En esta pantalla encontramos además un botón que nos permitirá ir a la segunda
 pantalla.
 
-·En la segunda pantalla se sitúa el menú principal que constará de tres botones. Cada uno 
-de estos puede ser pulsado por el usuario y le permitirá a este realizar cada una de las 
+·En la segunda pantalla se sitúa el menú principal que constará de tres botones. Cada uno
+de estos puede ser pulsado por el usuario y le permitirá a este realizar cada una de las
 consultas que desee.
 
-·Primer botón: muestra una pantalla con indicaciones para obtener tu IdCliente mediante tu 
-IdEntrada. Posee un campo de texto con su respectivo botón y según lo que se escriba mostrará 
-un mensaje u otro: 1º Si se escribe un IdEntrada válido, se mostrará un mensaje con el correspondiente 
-IdCliente. 2º Si se escribe un IdEntrada incorrecto, se mostrará un mensaje de error. Por otro 
+·Primer botón: muestra una pantalla con indicaciones para obtener tu IdCliente mediante tu
+IdEntrada. Posee un campo de texto con su respectivo botón y según lo que se escriba mostrará
+un mensaje u otro: 1º Si se escribe un IdEntrada válido, se mostrará un mensaje con el correspondiente
+IdCliente. 2º Si se escribe un IdEntrada incorrecto, se mostrará un mensaje de error. Por otro
 lado, esta pantalla posee un botón que nos permitirá volver al menú principal.
 
-·Segundo botón: muestra una pantalla con un texto en el que se indica que cátering será 
-servido al público durante el evento. Como la anterior, también posee un botón para volver 
+·Segundo botón: muestra una pantalla con un texto en el que se indica que cátering será
+servido al público durante el evento. Como la anterior, también posee un botón para volver
 al inicio.
 
-·Tercer botón: muestra una pantalla con seis botones. Cada uno de estos conducirá a una nueva 
-pantalla con una foto del artista correspondiente, la hora de su actuación y por último un botón 
+·Tercer botón: muestra una pantalla con seis botones. Cada uno de estos conducirá a una nueva
+pantalla con una foto del artista correspondiente, la hora de su actuación y por último un botón
 que permite volver al menú principal.
 
 [Aplicación QuevedoFest](https://github.com/miguelmartinez22/QuevedoFest/blob/master/App/QuevedoFest.aia)
 
-![Pantalla1](../images/capturas app/screen1.png) 
-![Menú](../images/capturas app/screen2.png)
-![ConsultarID](../images/capturas app/ConsultarID.png) 
-![Comida](../images/capturas app/Comida.png)
-![Artistas](../images/capturas app/Artistas.png) 
-![CTangana](../images/capturas app/Ctangana.png)
-![Aitana](../images/capturas app/Aitana.png) ![EnriqueIglesias](../images/capturas app/EnriqueIglesias.png)
-![JuánMagán](../images/capturas app/JuánMagán.png) ![OmarMontes](../images/capturas app/OmarMontes.png)
-![Rosalía](../images/capturas app/Rosalía.png)
+![PantallaInicial](../images/app/screen1.PNG) 
+![Menú](../images/app/screen2.PNG)
+![ConsultarID](../images/app/ConsultarID.PNG) 
+![Comida](../images/app/Comida.PNG)
+![Artistas](../images/app/Artistas.PNG) 
+![CTangana](../images/app/Ctangana.png)
+![Aitana](../images/app/Aitana.png) 
+![EnriqueIglesias](../images/app/EnriqueIglesias.png)
+![JuánMagán](../images/app/JuánMagán.PNG) 
+![OmarMontes](../images/app/OmarMontes.png)
+![Rosalía](../images/app/Rosalía.PNG)
 
 ## 8.2. Plan de pruebas
 
-En este apartado se desarrollarán una serie de acciones sobre la base de datos con la intención de 
+En este apartado se desarrollarán una serie de acciones sobre la base de datos con la intención de
 realizar pruebas y obtener conclusiones sobre esta.
 
 ---
@@ -126,7 +128,7 @@ delete from entrada
 where IdEntrada = 17;
 ```
 ---
-Añadir un cliente con un número de teléfono repetido (primero debemos añadir su entrada). 
+Añadir un cliente con un número de teléfono repetido (primero debemos añadir su entrada).
 Se espera obtener error.
 ```sql
 INSERT INTO Entrada (IdEntrada, Precio) VALUES
@@ -146,7 +148,7 @@ delete from entrada
 where IdEntrada = 17;
 ```
 ---
-Crear un nuevo mánager para un artista ya existente. Se espera obtener éxito, ya que un 
+Crear un nuevo mánager para un artista ya existente. Se espera obtener éxito, ya que un
 artista puede tener más de un representante.
 ```sql
 INSERT INTO Mánager (Mánager, Número, Artista) VALUES
@@ -182,7 +184,7 @@ ERROR:  new row for relation "material" violates check constraint "material_tipo
 DETAIL:  Failing row contains (9, Pizarra, Pizarra eléctrica, Permite la escritura).
 ```
 ---
-Crear un nuevo material para un tipo ya existente. Se espera obtener éxito, ya que no hay un 
+Crear un nuevo material para un tipo ya existente. Se espera obtener éxito, ya que no hay un
 número limitado de materiales por tipo.
 ```sql
 INSERT INTO Material (IdMaterial, TipoMaterial, Nombre, Descripción) VALUES
