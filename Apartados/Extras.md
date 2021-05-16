@@ -271,3 +271,9 @@ Es la gestión de los materiales del festival.
             Given un material nuevo
              When añado el material
              Then el material queda añadido
+
+---
+
+## 8.4. Diagrama de clases
+
+![Screenshot](../images/Diagrama-clases.png)

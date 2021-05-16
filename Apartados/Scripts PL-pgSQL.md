@@ -1,5 +1,73 @@
 # 7. Scripts en PL/pgSQL
 
+### Procedimiento borrar material (para la prueba se ha insertado un artista nuevo)
+```sql
+INSERT INTO Material (IdMaterial, TipoMaterial, Nombre, Descripción) VALUES
+    (9, 'Sonido', 'In-ear', 'Permite la comunicación entre el personal');
+```
+Script
+```sql
+create or replace procedure borrar_material(
+	m_nombre material.nombre%type
+)
+language plpgsql
+as
+$$
+declare
+	v_m_nombre material.nombre%type;
+begin
+	-- comprobar si existe el material
+	select nombre from material
+	into v_m_nombre 
+	where nombre = m_nombre;
+	-- borrar material
+	if found then 
+	delete from material
+	where nombre = m_nombre;
+	raise notice 'Material eliminado correctamente';
+	else
+		raise notice 'El material % no existe', m_nombre;
+	end if;
+	-- excepciones
+	exception
+		when others then 
+			raise notice 'Se ha producido un error inesperado';
+
+end;
+$$
+
+call borrar_material ('In-ear');
+```
+Resultado:
+```sql
+Antes de ejecutar el script:
+ idmaterial | tipomaterial |     nombre      |                descripción
+------------+--------------+-----------------+-------------------------------------------
+          1 | Sonido       | Micrófono       | Permite la grabación de sonido
+          2 | Sonido       | Altavoz         | Permite la salida de sonido
+          3 | Sonido       | Mesa de mezclas | Permite la regulación de sonido
+          4 | Sonido       | Amplificador    | Permite la conexión con los altavoces
+          5 | Luz          | Foco            | Permite una correcta iluminación
+          6 | Luz          | Leds            | Mejoran el escenario
+          7 | Grabación    | Cámara          | Permite la captación de imágenes
+          8 | Grabación    | Flash           | Mejora la calidad de la imágen
+          9 | Sonido       | In-ear          | Permite la comunicación entre el personal
+(9 rows)
+
+Después de ejecutar el script:
+ idmaterial | tipomaterial |     nombre      |              descripción
+------------+--------------+-----------------+---------------------------------------
+          1 | Sonido       | Micrófono       | Permite la grabación de sonido
+          2 | Sonido       | Altavoz         | Permite la salida de sonido
+          3 | Sonido       | Mesa de mezclas | Permite la regulación de sonido
+          4 | Sonido       | Amplificador    | Permite la conexión con los altavoces
+          5 | Luz          | Foco            | Permite una correcta iluminación
+          6 | Luz          | Leds            | Mejoran el escenario
+          7 | Grabación    | Cámara          | Permite la captación de imágenes
+          8 | Grabación    | Flash           | Mejora la calidad de la imágen
+(8 rows)
+```
+
 ### Procedimiento borrar artista (para la prueba se ha insertado un artista nuevo)
 ```sql
 insert into artista (nombre, sueldo) values ('Vicente del Bosque', 12);
@@ -9,7 +77,6 @@ Script
 create or replace procedure borrar_artista(
 	a_nombre artista.nombre%type
 )
-returns integer 
 language plpgsql
 as
 $$
@@ -21,13 +88,15 @@ begin
 	into v_a_nombre 
 	where nombre = a_nombre;
 	-- borrar artista
+	if found then
 	delete from artista
 	where nombre = a_nombre;
 	raise notice 'Artista eliminado correctamente';
+	else
+	raise notice 'El artista % no existe', a_nombre;
+	end if;
 	-- excepciones
 	exception
-		when no_data_found then
-			raise notice 'El artista % no existe', a_nombre;
 		when others then 
 			raise notice 'Se ha producido un error inesperado';
 
@@ -118,7 +187,7 @@ delete from artista
 where nombre = 'David Bustamante';
 ```
 
-### Función comprobar la cantidad de sueldos menores al dado
+### Procedimiento comprobar la cantidad de sueldos menores al dado
 
 Script
 ```sql
@@ -153,7 +222,7 @@ $$
 call comprobar_sueldos(10000);
 ```
 
-### Función consultar actuación
+### Procedimiento consultar actuación
 
 Script
 ```sql
