@@ -240,7 +240,7 @@ declare
 			join espacio es on (ev.escenario = es.tipoespacio)
 			where es.HoraUso = p_cur_actuacion;
 begin
-	-- modtrar actuaciones a la hora solicitada
+	-- mostrar actuaciones a la hora solicitada
 	open cur_actuacion(e_horauso);
 	fetch cur_actuacion into v_e_horauso;
 	raise notice 'A las % actua el/la artista %', e_horauso, v_e_horauso;
