@@ -1,24 +1,24 @@
 # QuevedoFest
-- [x] [1. Introducción](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Introduccion.md)
-- [x] [2. Modelo Conceptual](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Modelo_conceptual.md)
-   - [x] 2.1. Especificaciones
-   - [x] 2.2. Diagrama Entidad-Relación
-- [x] [3. Modelo Lógico](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Modelo_logico.md) 
-   - [x] 3.1. Modelo Relacional
-   - [x] 3.2. Normalización/Desnormalización
-- [x] [4. Modelo Físico](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Modelo_fisico.md)
-   - [x] 4.1. Diagrama de base de datos (notación "Crow's feet" o IDEF1X)
-   - [x] 4.2. Creación de tablas y otros objetos
-   - [x] 4.3. Carga de datos de prueba
-- [x] [5. Consultas de la base de datos](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Consultas%20de%20la%20base%20de%20datos.md)
-   - [x] 5.1. Consultas más frecuentes
-   - [x] 5.2. Consultas sencillas
-   - [x] 5.3. Consultas de agregación y resumen
-   - [x] 5.4. Consultas con subconsultas
-- [x] [6. Vistas, secuencias e índices](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Vistas_secuencias_indices.md)
-- [x] [7. Scripts en PL/pgSQL](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Scripts%20PL-pgSQL.md)
-- [X] [8. Extras](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Extras.md)
-   - [x] 8.1. Prototipo de interfaz de usuario
-   - [x] 8.2. Plan de pruebas
-   - [x] 8.3. Especificaciones de pruebas en formato features Gherkin
-   - [x] 8.4. Diagrama de clases
+- [1. Introducción](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Introduccion.md)
+- [2. Modelo Conceptual](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Modelo_conceptual.md)
+   - 2.1. Especificaciones
+   - 2.2. Diagrama Entidad-Relación
+- [3. Modelo Lógico](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Modelo_logico.md) 
+   - 3.1. Modelo Relacional
+   - 3.2. Normalización/Desnormalización
+- [4. Modelo Físico](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Modelo_fisico.md)
+   - 4.1. Diagrama de base de datos (notación "Crow's feet" o IDEF1X)
+   - 4.2. Creación de tablas y otros objetos
+   - 4.3. Carga de datos de prueba
+- [5. Consultas de la base de datos](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Consultas%20de%20la%20base%20de%20datos.md)
+   - 5.1. Consultas más frecuentes
+   - 5.2. Consultas sencillas
+   - 5.3. Consultas de agregación y resumen
+   - 5.4. Consultas con subconsultas
+- [6. Vistas, secuencias e índices](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Vistas_secuencias_indices.md)
+- [7. Scripts en PL/pgSQL](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Scripts%20PL-pgSQL.md)
+- [8. Extras](https://github.com/miguelmartinez22/QuevedoFest/blob/master/Apartados/Extras.md)
+   - 8.1. Prototipo de interfaz de usuario
+   - 8.2. Plan de pruebas
+   - 8.3. Especificaciones de pruebas en formato features Gherkin
+   - 8.4. Diagrama de clases

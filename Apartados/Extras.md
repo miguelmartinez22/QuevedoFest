@@ -30,6 +30,13 @@ que permite volver al menú principal.
 
 [Aplicación QuevedoFest](https://github.com/miguelmartinez22/QuevedoFest/blob/master/App/QuevedoFest.aia)
 
+![Screenshot](../images/capturas app/screen1.png) ![Screenshot](../images/capturas app/screen2.png)
+![Screenshot](../images/capturas app/ConsultarID.png) ![Screenshot](../images/capturas app/Comida.png)
+![Screenshot](../images/capturas app/Artistas.png) ![Screenshot](../images/capturas app/Ctangana.png)
+![Screenshot](../images/capturas app/Aitana.png) ![Screenshot](../images/capturas app/EnriqueIglesias.png)
+![Screenshot](../images/capturas app/JuánMagán.png) ![Screenshot](../images/capturas app/OmarMontes.png)
+![Screenshot](../images/capturas app/Rosalía.png)
+
 ## 8.2. Plan de pruebas
 
 En este apartado se desarrollarán una serie de acciones sobre la base de datos con la intención de 
@@ -276,4 +283,4 @@ Es la gestión de los materiales del festival.
 
 ## 8.4. Diagrama de clases
 
-![Screenshot](../images/Diagrama-clases.png)
+![Screenshot](../images/Diagrama-clases.jpg)
