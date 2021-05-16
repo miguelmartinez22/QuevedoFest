@@ -30,7 +30,7 @@ que permite volver al menú principal.
 
 [Aplicación QuevedoFest](https://github.com/miguelmartinez22/QuevedoFest/blob/master/App/QuevedoFest.aia)
 
-![Screenshot](../images/capturas app/screen1.png) ![Screenshot](../images/capturas app/screen2.png)
+![Screenshot](../images/capturas app/screen1.png) ![Screenshot](../imags/capturas app/screen2.png)
 ![Screenshot](../images/capturas app/ConsultarID.png) ![Screenshot](../images/capturas app/Comida.png)
 ![Screenshot](../images/capturas app/Artistas.png) ![Screenshot](../images/capturas app/Ctangana.png)
 ![Screenshot](../images/capturas app/Aitana.png) ![Screenshot](../images/capturas app/EnriqueIglesias.png)
