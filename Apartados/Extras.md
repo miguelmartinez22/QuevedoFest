@@ -30,12 +30,12 @@ que permite volver al menú principal.
 
 [Aplicación QuevedoFest](https://github.com/miguelmartinez22/QuevedoFest/blob/master/App/QuevedoFest.aia)
 
-![Screenshot](../images/capturas app/screen1.png) ![Screenshot](../images/capturas app/screen2.png)
-![Screenshot](../images/capturas app/ConsultarID.png) ![Screenshot](../images/capturas app/Comida.png)
-![Screenshot](../images/capturas app/Artistas.png) ![Screenshot](../images/capturas app/Ctangana.png)
-![Screenshot](../images/capturas app/Aitana.png) ![Screenshot](../images/capturas app/EnriqueIglesias.png)
-![Screenshot](../images/capturas app/JuánMagán.png) ![Screenshot](../images/capturas app/OmarMontes.png)
-![Screenshot](../images/capturas app/Rosalía.png)
+![Pantalla1](../images/capturas app/screen1.png) ![Menú](../images/capturas app/screen2.png)
+![ConsultarID](../images/capturas app/ConsultarID.png) ![Comida](../images/capturas app/Comida.png)
+![Artistas](../images/capturas app/Artistas.png) ![CTangana](../images/capturas app/Ctangana.png)
+![Aitana](../images/capturas app/Aitana.png) ![EnriqueIglesias](../images/capturas app/EnriqueIglesias.png)
+![JuánMagán](../images/capturas app/JuánMagán.png) ![OmarMontes](../images/capturas app/OmarMontes.png)
+![Rosalía](../images/capturas app/Rosalía.png)
 
 ## 8.2. Plan de pruebas
 
@@ -283,4 +283,4 @@ Es la gestión de los materiales del festival.
 
 ## 8.4. Diagrama de clases
 
-![Screenshot](../images/Diagrama-clases.jpg)
+![Diagrama-Clases](../images/Diagrama-clases.jpg)

@@ -21,4 +21,4 @@ Un material puede ser a la vez de varios tipos. Ejemplo: foco (luz y grabación)
 El contacto con los artistas es efectuado a través de su mánager
 
 ## 2.2. Diagrama Entidad-Relación
-![Screenshot](../images/Diagrama-entidad-relación.png)
+![Entidad-Relación](../images/Diagrama-entidad-relación.png)

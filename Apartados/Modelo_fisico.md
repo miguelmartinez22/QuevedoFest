@@ -1,7 +1,7 @@
 # 4. Modelo Físico
 ## 4.1. Diagrama de base de datos (notación "Crow's feet" o IDEF1X)
 
-![Screenshot](../images/Diagrama%20de%20base%20de%20datos.png)
+![Base-Datos](../images/Diagrama%20de%20base%20de%20datos.png)
 
 ##  4.2. Creación de tablas y otros objetos
 
