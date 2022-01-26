@@ -27,7 +27,7 @@ EVENTO(id(PK))
 
 POSEE(idEvento(FK), idMaterial(FK), idEspacios(FK), idCátering(FK))
 
-## 3.1. Normalización/Desnormalización
+## 3.2. Normalización/Desnormalización
 
 ### CLIENTE:
 
